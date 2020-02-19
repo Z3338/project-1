@@ -1,0 +1,11 @@
+#未生成bin
+import numpy
+import PIL.Image
+
+#图转二进制
+with open("img.jpg","rb") as f:
+	img_bin = f.read()
+
+# 二进制转图片
+with open("img.jpg","wb") as f:
+    f.write(img_bin)
