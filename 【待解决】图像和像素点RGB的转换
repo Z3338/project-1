@@ -1,0 +1,16 @@
+
+import numpy
+import PIL.Image
+
+result = numpy.array([])
+image = PIL.Image.open('1.jpg')
+width,height=image.size
+fh=open('1.txt','w')
+
+r,g,b=image.split()  #按像素点 找rgb 是numpy数组
+print(r)
+array=numpy.array(image)  #三元组
+print(array)
+with open("1.jpg","rb") as f:
+	img_bin = f.read() # 内容读取
+fh.close()
