@@ -1,0 +1,12 @@
+import numpy as np
+import cv2
+
+img1 = cv2.imread("3.jpg", 1)
+img1.tofile("test3.bin")  # 将jpg图片保存到二进制文件
+
+img2 = np.fromfile("1.bin", dtype=np.uint8)  # 从二进制文件恢复图片，注意dtype格式要与src一致
+img2 = np.reshape(img2, 2)  # 从二进制读取的数据是一维的，需要恢复到原图一致的维度
+
+cv2.imshow("img2", img2)
+
+cv2.waitKey(0)
